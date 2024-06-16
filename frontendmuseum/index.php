@@ -34,7 +34,9 @@
     </h1>
     <main>
       <?php 
-      include "data/data.php";
+      include("classes.php");
+      $db = new DB();
+      $exhibits = $db->execute("SELECT * FROM exhibits");
       foreach ($exhibits as $exhibit):
       ?>
       <article>
